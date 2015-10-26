@@ -10,7 +10,7 @@
         var that = this;
         this.url = url;
 		//alert(window.location.pathname + '/' + this.url);
-		$.ajax({
+	$.ajax({
             url : window.location.pathname + '/' + this.url,
             data : that.field,
             type : 'POST',
@@ -21,7 +21,7 @@
                 checkbox.init(true);
                 $('input[type=checkbox]').click(function() {
                     if (list.checked().length != 0) {
-                        $("#view, #edit, #delete, #assign").prop('disabled', false);
+                        $("#view, #edit, #delete, #assign, #specification").prop('disabled', false);
                     } else {
                         $("#view, #edit, #delete, #assign").prop('disabled', true);
                     }
