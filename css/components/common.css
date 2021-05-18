@@ -5,8 +5,3 @@
 @import url(../printStyle.css);
 @import url(../login.css);
 @import url(../root.css);
-/*.list-cell.last{
-	display: table-cell;
-	vertical-align:middle;
-	float:left;
-}*
