@@ -1,0 +1,13 @@
+.print-mainside{
+	float: right;
+	width: 98%;
+	margin: 0 10px 0 100px;
+}
+#table-print{
+	float: right;
+	width: 100%;
+	margin: 0;
+}
+.sub-cell{
+	margin: 0 0 0 70%;
+}
