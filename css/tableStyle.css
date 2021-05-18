@@ -1,0 +1,120 @@
+table{
+	width: 100%;
+	table-layout: fixed;
+	margin: auto;
+}
+.table-head{
+	width: 100%;
+	background-color: #a9fcb7;
+	font-weight: normal;
+}
+.table-print{
+	background-color: #ffffff;
+}
+.table-row:hover{
+	//background-color: #ebebe0;
+}
+tbody{
+	width: 100%;
+	display: table-cell;
+}
+.table-cell{
+	vertical-align:middle;
+	border: solid 1px #CCCCCC;
+	word-wrap: break-word;
+	padding: 5px 10px;
+}
+.table-cell.object{
+	vertical-align:middle;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px 10px;
+}
+.table-cell.object p{
+	margin: 0px;
+}
+.table-cell.align-center{
+	text-align:center;
+}
+.table-cell.fs10{
+	font-size: 10px;
+}
+.table-cell.id{
+	width:4%;
+	text-align:center;
+}
+.table-cell.w4{
+	width:4%;
+}
+.table-cell.w5{
+	width:5%;
+}
+.table-cell.w6{
+	width:6%;
+}
+.table-cell.w8{
+	width:8%;
+}
+.table-cell.w10{
+	width:10%;
+}
+.table-cell.w11{
+	width:11%;
+}
+.table-cell.w15{
+	width:15%;
+}
+.table-cell.w20{
+	width:20%;
+}
+.table-cell.w22{
+	width:22%;
+}
+.table-cell.w25{
+	width:25%;
+}
+.table-cell.w30{
+	width:30%;
+}
+.table-cell.w35{
+	width:35%;
+}
+.table-cell.w40{
+	width:40%;
+}
+.table-cell.w45{
+	width:45%;
+}
+.blank{
+	background-color:white;
+}
+.claimed{
+	background-color:white;
+}
+.blankOn{
+	background-color:#FFFE40;
+}
+.priceAccept{
+	background-color:#0066FF;
+}
+.processing{
+	background-color:yellow;
+}
+.accept{
+	background-color:#39E639;
+}
+.processed{
+	background-color:#39E639;
+}
+.reject{
+	background-color:#FF7373;
+}
+.rejected{
+	background-color:#FF7373;
+}
+.block{
+	background-color:#A62F00;
+}
+.paused{
+	background-color:#A62F00;
+}
