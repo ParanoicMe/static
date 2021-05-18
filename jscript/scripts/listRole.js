@@ -1,4 +1,4 @@
-$(document).ready(function () {
+navigation.role = function () {
     $("#new").click(function () {
 		window.location.href = "/HU-Web/roles/add";
     });
@@ -14,6 +14,19 @@ $(document).ready(function () {
         }
     });
     $("#delete").click(function () {
-		window.location.href = "/HU-Web/roles/delete";
+		sendData = {ids : list.checked().id};
+		url = "delete";
+		deleteRole(url, sendData, 'POST', 'application/json');
     });
-});
+
+	function deleteRole(url, sendData, type, contentType) {
+		$.ajax({
+            		url : window.location.pathname + '/' + this.url,
+            		data : sendData,
+            		type : type,
+			success: function (jsonData) {
+			
+			}
+		});
+	};
+};
