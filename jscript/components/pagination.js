@@ -1,18 +1,24 @@
-list.pagination = function() {
+table.pagination = function() {
 	var that = this;
-	$('#page').text(list.field.page);
+	var countRows=10;
+	
+	$('#page').text(table.field.page);
 	$('#previouspage a').click(function () {
-		if(list.field.page>1){
+		if(table.field.page>1){
 			checkbox.unCheckAll(true);
-			list.field.page=parseInt($('#page').text())-1;
+			table.field.page=parseInt($('#page').text())-1;
 			that.init(that.url, that.fields);
-			$('#page').text(list.field.page);
+			$('#page').text(table.field.page);
 		} 
     });
 	$('#nextpage a').click(function () {
-		checkbox.unCheckAll(true);
-		list.field.page=parseInt($('#page').text())+1;
-		that.init(that.url, that.fields);
-		$('#page').text(list.field.page);
+		var maxPage=Math.floor(table.count/countRows);
+		maxPage = maxPage + ((table.count % countRows)>0 ? 1 : 0);
+		if(table.field.page<maxPage){
+			checkbox.unCheckAll(true);
+			table.field.page=parseInt($('#page').text())+1;
+			that.init(that.url, that.fields);
+			$('#page').text(table.field.page);
+		}
     });
 }
