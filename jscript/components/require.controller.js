@@ -118,7 +118,97 @@ switch(page[0]) {
 		table.pagination();
 		list.init("list.do", ["userName", "countClaimed", "countPriceAccept", "countProcessed", "countRejected", "countPaused"]);
         });
-        break;
+	break;
+	case 'operations' :
+        if (!page[1]) {
+            require(['jquery', 'bootstrap', 'multiModal', 'listOperation', 'list', 'checkbox', 'navigation', 'pagination'], function() {
+				navigation.left();
+				navigation.operation();
+				table.pagination();
+				list.field.field = 'name';
+				list.init("list.do", ["name"]);
+            });
+        } else {
+            require(['jquery', 'bootstrap', 'multiModal', 'checkbox', 'formOperation', 'navigation', 'validation'], function() {
+		navigation.left();
+		checkbox.init(true);
+		formOperation();
+		//validation.init();
+            });
+        }
+	break;
+	case 'reasons' :
+        if (!page[1]) {
+            require(['jquery', 'bootstrap', 'multiModal', 'listReason', 'list', 'checkbox', 'navigation', 'pagination'], function() {
+				navigation.left();
+				navigation.reason();
+				table.pagination();
+				list.field.field = 'name';
+				list.init("list.do", ["name"]);
+            });
+        } else {
+            require(['jquery', 'bootstrap', 'multiModal', 'checkbox', 'formReason', 'navigation', 'validation'], function() {
+		navigation.left();
+		checkbox.init(true);
+		formReason();
+		//validation.init();
+            });
+        }
+	break;
+	case 'organizations' :
+        if (!page[1]) {
+            require(['jquery', 'bootstrap', 'multiModal', 'listOrganization', 'list', 'checkbox', 'navigation', 'pagination'], function() {
+				navigation.left();
+				navigation.Organization();
+				table.pagination();
+				list.field.field = 'name';
+				list.init("list.do", ["name"]);
+            });
+        } else {
+            require(['jquery', 'bootstrap', 'multiModal', 'checkbox', 'formOrganization', 'navigation', 'validation'], function() {
+		navigation.left();
+		checkbox.init(true);
+		formOrganization();
+		//validation.init();
+            });
+        }
+	break;
+	case 'positions' :
+        if (!page[1]) {
+            require(['jquery', 'bootstrap', 'multiModal', 'listPosition', 'list', 'checkbox', 'navigation', 'pagination'], function() {
+				navigation.left();
+				navigation.position();
+				table.pagination();
+				list.field.field = 'name';
+				list.init("list.do", ["name"]);
+            });
+        } else {
+            require(['jquery', 'bootstrap', 'multiModal', 'checkbox', 'formPosition', 'navigation', 'validation'], function() {
+		navigation.left();
+		checkbox.init(true);
+		formPosition();
+		//validation.init();
+            });
+        }
+	break;
+	case 'shops' :
+        if (!page[1]) {
+            require(['jquery', 'bootstrap', 'multiModal', 'listShop', 'list', 'checkbox', 'navigation', 'pagination'], function() {
+				navigation.left();
+				navigation.shop();
+				table.pagination();
+				list.field.field = 'name';
+				list.init("list.do", ["name"]);
+            });
+        } else {
+            require(['jquery', 'bootstrap', 'multiModal', 'checkbox', 'formShop', 'navigation', 'validation'], function() {
+		navigation.left();
+		checkbox.init(true);
+		formShop();
+		//validation.init();
+            });
+        }
+	break;
 }
 
 require.config({
