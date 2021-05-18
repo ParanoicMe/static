@@ -44,4 +44,19 @@ navigation.left = function() {
 		that.field.filter = "paused";
 		that.init("list.do", that.fields);
 	});
+	$("#shops").click(function () {
+		window.location.href = "/HU-Web/roles";
+	});
+	$("#operations").click(function () {
+		window.location.href = "/HU-Web/roles";
+	});
+	$("#reasons").click(function () {
+		window.location.href = "/HU-Web/roles";
+	});
+	$("#organizations").click(function () {
+		window.location.href = "/HU-Web/roles";
+	});
+	$("#positions").click(function () {
+		window.location.href = "/HU-Web/roles";
+	});
 }
