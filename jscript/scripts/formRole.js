@@ -1,7 +1,8 @@
-$(document).ready(function () {
+formRole = function () {
     $("#save").click(function () {
+	validation.check();
 	var id = $('#roleId').val();
-        var sendData = $('#formRole').serialize();
+        var sendData = $('#form').serialize();
         addRole('addOrEdit.do', sendData, 'save', 'application/x-www-form-urlencoded');
     });
 
@@ -15,20 +16,12 @@ $(document).ready(function () {
 			url: url,
 			data: sendData,
 			contentType: contentType,
-			async: false,
+			async: true,
 			processData: false,
 			success: function (jsonData) {
 				if(jsonData.status=='SUCCESS' && jsonData.recordName=='role'){
-					$('body').modalWindow({
-						action: "message",
-						title: "Saved",
-						text: "The protocol has been saved: " + jsonData.result,
-						onAgree: function () {
-							if (type === "save") {
-								window.location.href = "/HU-Web/roles";
-							}
-						}
-					});
+					window.location.href = "/HU-Web/roles"
+					
 				}
 			},
 			error: function (xhr, message) {
@@ -36,5 +29,4 @@ $(document).ready(function () {
 			}
 		});
 	}
-	
-});
+};
