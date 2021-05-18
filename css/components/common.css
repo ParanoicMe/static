@@ -1,5 +1,12 @@
 @import url(../libs/bootstrap.css);
 @import url(../formStyle.css);
 @import url(../listStyle.css);
+@import url(../tableStyle.css);
+@import url(../printStyle.css);
 @import url(../login.css);
 @import url(../root.css);
+/*.list-cell.last{
+	display: table-cell;
+	vertical-align:middle;
+	float:left;
+}*
