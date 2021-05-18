@@ -1,31 +1,95 @@
 .list-cell{
-float:left;
-padding: 10px;
-width:120px;
-vertical-align: top;
+	padding: 10px;
+	width:15%;
+	display: table-cell;
+	vertical-align:middle;
+	word-wrap: break-word;
 }
+
 .list-cell.id{
-width:12px;
+	display: table-cell;
+	text-align:center;
+	width:2%;
 }
-.list-cell.last{
-float:left;
-}
+/*.list-cell.last{
+	display: table-cell;
+	vertical-align:middle;
+	float:left;
+}*/
 .list-row{
-float:left;
-width:100%;
+	float:left;
+	width:100%;
+}
+.list-row:hover{
+	float:left;
+	width:100%;
+	background-color: #e0dede;
 }
 .list-cell.object{
-font-size: 16px;
+	display: table-cell;
+	font-size: 16px;
+	text-align: center;
+}
+.list-cell.align-center{
+	text-align:center;
+}
+.list-cell.fs10{
+	font-size: 10px;
+}
+.list-cell.w4{
+	width:4%;
+}
+.list-cell.w5{
+	width:5%;
+}
+.list-cell.w6{
+	width:6%;
+}
+.list-cell.w7{
+	width:7%;
+}
+.list-cell.w8{
+	width:9%;
+}
+.list-cell.w10{
+	width:10%;
+}
+.list-cell.w15{
+	width:15%;
+}
+.list-cell.w20{
+	width:20%;
+}
+.list-cell.w30{
+	width:30%;
+}
+.list-cell.w40{
+	width:40%;
+}
+.list-cell.w45{
+	width:45%;
 }
 .list-head{
-float:left;
-width:100%;
+	float:left;
+	width:100%;
+}
+.list-head .list-row{
+	background-color: #a9fcb7;
+}
+.list-head .list-row:hover{
+	background-color: #a9fcb7;
 }
 .pagination{
-text-align:center;
-width:30%;
-margin: 0 auto;
+	text-align:center;
+	width:100%;
+	margin: 0 auto;
 }
 .pagination div{
-display:inline;
+	display:inline;
+}
+.head-helper{
+display: block;
+	height: 100%;
+	width: 50%;
+	float: left;
 }
