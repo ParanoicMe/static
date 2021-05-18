@@ -1,9 +1,9 @@
-$(document).ready(function () {
+formUser = function () {
     $("#save").click(function () {
-	var id = $('#userid').attr('value');
-        var sendData = $('#formUser').serialize();
+	var id = $('#userId').attr('value');
+        var sendData = $('#form').serialize();
         if (id != "") {
-			setRoles('edit.do', sendData, 'save', 'application/x-www-form-urlencoded');
+			saveUser('edit.do', sendData, 'save', 'application/x-www-form-urlencoded');
         }
     });
 
@@ -11,7 +11,7 @@ $(document).ready(function () {
 		window.location.href = "/HU-Web/users";
     });
 	
-	function setRoles(url, sendData, type, contentType) {
+	function saveUser(url, sendData, type, contentType) {
 		$.ajax({
 			type: 'POST',
 			url: url,
@@ -20,23 +20,32 @@ $(document).ready(function () {
 			async: false,
 			processData: false,
 			success: function (jsonData) {
-				if(jsonData.status=='SUCCESS' && jsonData.recordName=='userRole'){
-					$('body').modalWindow({
-						action: "message",
-						title: "Saved",
-						text: "The user has been saved: " + jsonData.result,
-						onAgree: function () {
-							if (type === "save") {
-								window.location.href = "/HU-Web/users";
-							}
-						}
-					});
+				if(jsonData.status=='STATUSSUCCESS'){
+					var options = {
+						title: 'Внимание',
+						action : 'message',
+						text : 'Пользователь' + jsonData.result + ' успешно сохранен.',
+						onAgree : function(){
+							window.location.href = "/HU-Web/users";
+						},
+						onDisagree : function(){}
+					};
+					$('.footer').modalWindow(options);
 				}
 			},
 			error: function (xhr, message) {
-				alert("Ajax error" + message);
+				var options = {
+						title: 'Внимание',
+						action : 'message',
+						text : 'Ошибка' + message,
+						onAgree : function(){
+						},
+						onDisagree : function(){}
+					};
+					$('.footer').modalWindow(options);
+				//alert("Ajax error" + message);
 			}
 		});
 	}
 	
-});
+};
