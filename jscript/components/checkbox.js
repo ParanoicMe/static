@@ -44,6 +44,7 @@ var checkbox = {
     unCheckAll : function(fl) {
         $('input[type=checkbox]').prop('checked', false);
         if(fl) { $('.list-row').removeClass('active'); }
+        if(fl) { $('.table-row').removeClass('active'); }
     },
     init : function(flag) {
         this.checkAll(flag);
