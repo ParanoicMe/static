@@ -45,18 +45,18 @@ navigation.left = function() {
 		that.init("list.do", that.fields);
 	});
 	$("#shops").click(function () {
-		window.location.href = "/HU-Web/roles";
+		window.location.href = "/HU-Web/shops";
 	});
 	$("#operations").click(function () {
-		window.location.href = "/HU-Web/roles";
+		window.location.href = "/HU-Web/operations";
 	});
 	$("#reasons").click(function () {
-		window.location.href = "/HU-Web/roles";
+		window.location.href = "/HU-Web/reasons";
 	});
 	$("#organizations").click(function () {
-		window.location.href = "/HU-Web/roles";
+		window.location.href = "/HU-Web/organizations";
 	});
 	$("#positions").click(function () {
-		window.location.href = "/HU-Web/roles";
+		window.location.href = "/HU-Web/positions";
 	});
 }
